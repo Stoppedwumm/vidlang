@@ -10,6 +10,16 @@
 |height auto
 |play 0
 -
+:new text
+|overlay last_video
+|text "Memes i stole from discord with scratch"
+|text_pos up_center
+-
+:new text
+|overlay last_video
+|text "Part 4"
+|text_pos down_center
+-
 :repeatforfiles
 |path videos/
 |play 0
