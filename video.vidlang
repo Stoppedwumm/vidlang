@@ -1,0 +1,16 @@
+:format 9x16
+:standard_video_settings
+|width 100%
+|height auto
+|pos center
+-
+:new video
+|path intro.mp4
+|width 130%
+|height auto
+|play 0
+-
+:repeatforfiles
+|path videos/
+|play 0
+-
