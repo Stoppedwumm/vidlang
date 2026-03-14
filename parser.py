@@ -24,13 +24,13 @@ def readAndParse(filename: str):
         if command.strip() == "":
             continue
         c = command.strip().split(" ")
-        print(c, contextMode)
         if c[0] == "-":
                 if contextMode == False:
                     raise ValueError("Tried to close nothing")
                 if actionContext == "std_vid":
                     info["default_video_settings"] = contextWindow
                 else:
+                    contextWindow["command"] = actionContext
                     info["actions"].append(contextWindow)
                 
                 actionContext = ""
@@ -46,7 +46,6 @@ def readAndParse(filename: str):
 
         if c[0].startswith(":"):
             actualCommand = c[0].removeprefix(":")
-            print(actualCommand)
             if actualCommand == "format":
                 info["format"] = c[1]
             if actualCommand == "standard_video_settings":
